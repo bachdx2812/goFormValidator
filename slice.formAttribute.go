@@ -1,18 +1,11 @@
 package goFormValidator
 
 import (
-	"server/app/gql/inputs/adminInputs"
-	"server/app/gql/inputs/employerInputs"
-	"server/app/gql/inputs/workerInputs"
 	"time"
 )
 
 type NestedSlices interface {
-	workerInputs.WorkerSkillInput |
-		workerInputs.WorkerCertificationInput |
-		employerInputs.JobCertificationInput |
-		adminInputs.JobTypeUpdateSkillLevelInput |
-		string
+	string
 }
 
 type SliceAttribute[T NestedSlices] struct {

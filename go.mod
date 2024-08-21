@@ -1,4 +1,4 @@
-module github.com/bachdx2812/goFormValidator
+module github.com/bachdx2812/goFormValidator/v2
 
 go 1.20
 

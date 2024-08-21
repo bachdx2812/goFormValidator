@@ -1,7 +1,6 @@
 package goFormValidator
 
 import (
-	"fmt"
 	"time"
 )
 
@@ -66,7 +65,7 @@ func (attribute *TimeAttribute) ValidateMax(max interface{}, message *string) {
 	switch v := max.(type) {
 	case time.Time:
 		if attribute.TimeValue != nil && v.Before(*attribute.TimeValue) {
-			attribute.AddError(translator.Translate(nil, "ValidationTimeMax", fmt.Sprintf("%+v", v)))
+			attribute.AddError(*message)
 		}
 	default:
 		panic("Need to provide time interface{} as params")

@@ -2,7 +2,6 @@ package goFormValidator
 
 import (
 	"fmt"
-	"server/app/pkg/translator"
 	"time"
 )
 
@@ -56,7 +55,7 @@ func (attribute *TimeAttribute) ValidateMin(min interface{}, message *string) {
 	switch v := min.(type) {
 	case time.Time:
 		if attribute.TimeValue != nil && v.After(*attribute.TimeValue) {
-			attribute.AddError(translator.Translate(nil, "ValidationTimeMin", fmt.Sprintf("%+v", v)))
+			attribute.AddError(*message)
 		}
 	default:
 		panic("Need to provide time interface{} as params")

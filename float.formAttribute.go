@@ -1,7 +1,6 @@
 package goFormValidator
 
 import (
-	"server/app/pkg/translator"
 	"time"
 
 	"golang.org/x/exp/constraints"
@@ -70,7 +69,7 @@ func (attribute *FloatAttribute[T]) ValidateMax(max interface{}, message *string
 	switch v := max.(type) {
 	case float64:
 		if v < float64(attribute.Value) {
-			attribute.AddError(translator.Translate(nil, "ValidationFloatMax", max))
+			attribute.AddError(*message)
 		}
 	default:
 		panic("Need to provide float64 interface{} as params")

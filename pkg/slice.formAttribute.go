@@ -1,4 +1,4 @@
-package gfv
+package goFormValidator
 
 import (
 	"server/app/gql/inputs/adminInputs"

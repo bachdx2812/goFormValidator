@@ -1,4 +1,4 @@
-package goFormValidators
+package goFormValidator
 
 import (
 	"server/app/pkg/translator"

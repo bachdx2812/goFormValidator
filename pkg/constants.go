@@ -1,4 +1,4 @@
-package goFormValidators
+package goFormValidator
 
 const (
 	UnprocessableContentErrorCode = 400
